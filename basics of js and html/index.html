@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            color: black;
+        }
+    </style>
+    <script>
+        function myFuntion() {
+            document.getElementById("5").innerHTML = "paragraph ended."
+        }
+    </script>
+</head>
+
+<body id="1">
+    <button onclick="document.getElementById('1').style.backgroundColor = 'black'; document.getElementById('1').style.color = 'white';">back ground black</button>
+    <div id="2"> hello world</div>
+    <button onclick="document.getElementById('3').src='pic_bulbon.gif'">on</button><img id="3" src="pic_bulboff.gif"
+        alt="off"><button onclick="document.getElementById('3').src='pic_bulboff.gif'">off</button>
+    <p id="4"></p>
+    <script>
+        document.getElementById('4').innerHTML = "hi i am vishal"
+        document.write(5 + 6)
+    </script>
+    <p id="5">the paragraph starts here</p>
+    <button onclick="myFuntion()">try</button>
+    <button onclick="document.write(5+6)">(document)5+6=</button>
+    <button onclick="window.alert(5+6)">(alert)5+6=</button>
+    <script>alert(5 + 6)
+        console.log(5 + 7)
+    </script>
+    <button onclick="window.print()">print page</button>
+
+
+</body>
+
+</html>
