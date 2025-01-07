@@ -17,4 +17,5 @@ function check(){
         s=`No ${value} is not a palandrom`
         alert(s)
     }
+    input.value=""
 };
