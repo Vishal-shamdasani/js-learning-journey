@@ -35,5 +35,6 @@ function genrateQuote(){
         s.add(index);
         document.getElementById("Quote").innerHTML=quotes[index];
     }
+    s.clear();
     break;
     }}
