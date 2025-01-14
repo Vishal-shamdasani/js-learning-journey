@@ -24,5 +24,8 @@ function loadItem() { }
 
 function saveItem() { }
 
-function removeItem(idx) { }
+function removeItem(idx) {
+    items.splice(idx,1)
+    renderItems()
+ }
 renderItems()
