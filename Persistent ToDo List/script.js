@@ -1,6 +1,7 @@
-let items = ["hello world", "how are you"];
+let items = [];
 
-const itemsDiv = document.getElementById("Items")
+const itemsDiv = document.getElementById("Items");
+const storageKey="Items"
 
 function renderItems() {
     itemsDiv.innerHTML = null;
@@ -20,24 +21,37 @@ function renderItems() {
     }
 }
 
-function loadItem() { }
+function loadItem() { 
+    const oldItems= localStorage.getItem(storageKey)
+    if(oldItems){
+        items=JSON.parse(oldItems)
+    }
+    renderItems()
+}
 
-function saveItem() { }
+function saveItem() { 
+    const itemsString=JSON.stringify(items)
+    localStorage.setItem(storageKey,itemsString)
+}
 
 function addItem() {
     temp=document.getElementById("itemInput")
     if (temp.value===""){
         alert("you can't add a empty item to the list")
+        return 
     }
     else{
         items.push(temp.value)
+        temp.value=""
     }
+    saveItem()
     renderItems()
 }
 
 
 function removeItem(idx) {
     items.splice(idx,1)
+    saveItem()
     renderItems()
  }
-renderItems()
+document.addEventListener("DOMContentLoaded",loadItem)
