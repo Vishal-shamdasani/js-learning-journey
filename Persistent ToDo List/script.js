@@ -24,6 +24,18 @@ function loadItem() { }
 
 function saveItem() { }
 
+function addItem() {
+    temp=document.getElementById("itemInput")
+    if (temp.value===""){
+        alert("you can't add a empty item to the list")
+    }
+    else{
+        items.push(temp.value)
+    }
+    renderItems()
+}
+
+
 function removeItem(idx) {
     items.splice(idx,1)
     renderItems()
