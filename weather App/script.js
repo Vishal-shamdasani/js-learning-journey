@@ -3,7 +3,7 @@ async function fetchWeather() {
     const options = {
         method: 'GET',
         headers: {
-            'x-rapidapi-key': '1e6bd7eb0cmsh298943e169fc791p18d0f3jsnb62c76ebb3f8',
+            'x-rapidapi-key': '',
             'x-rapidapi-host': 'yahoo-weather5.p.rapidapi.com'
         }
     };
